@@ -235,6 +235,8 @@ install_python_dependencies() {
     source "/venv/bin/activate"
   fi
 
+  virtualenv venv
+  source "/venv/bin/activate"
   # Updating pip if there is one
   echo "Checking for pip updates before Python operations."
   pip install --upgrade pip >&3

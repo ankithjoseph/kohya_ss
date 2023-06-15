@@ -232,7 +232,7 @@ install_python_dependencies() {
     fi
 
     # Activate the virtual environment
-    source "$DIR/venv/bin/activate"
+    source "/venv/bin/activate"
   fi
 
   # Updating pip if there is one

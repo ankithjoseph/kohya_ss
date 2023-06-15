@@ -232,11 +232,11 @@ install_python_dependencies() {
     fi
 
     # Activate the virtual environment
-    source "$DIR/venv/bin/activate"
+    source "/venv/bin/activate"
   fi
 
   virtualenv venv
-  source "$DIR/venv/bin/activate"
+  source "/venv/bin/activate"
   # Updating pip if there is one
   echo "Checking for pip updates before Python operations."
   pip install --upgrade pip >&3

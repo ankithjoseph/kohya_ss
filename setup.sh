@@ -220,9 +220,11 @@ install_python_dependencies() {
   echo "Switching to virtual Python environment."
   if ! inDocker; then
     if command -v python3.10 >/dev/null; then
-      python3.10 -m venv "$DIR/venv"
+      # python3.10 -m venv "$DIR/venv"
+      virtualenv venv
     elif command -v python3 >/dev/null; then
-      python3 -m venv "$DIR/venv"
+      # python3 -m venv "$DIR/venv"
+      virtualenv venv
     else
       echo "Valid python3 or python3.10 binary not found."
       echo "Cannot proceed with the python steps."

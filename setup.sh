@@ -218,6 +218,7 @@ create_symlinks() {
 install_python_dependencies() {
   # Switch to local virtual env
   echo "Switching to virtual Python environment."
+  pip install virtualenv -q
   if ! inDocker; then
     if command -v python3.10 >/dev/null; then
       # python3.10 -m venv "$DIR/venv"
